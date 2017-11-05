@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  node01:
+    build: ./node01
+    hostname: node01
+    command: /usr/bin/supervisord
+    environment:
+      ZOOKEEPER_MYID: 1
+    #volumes:
+    #  - ./node01:/work
+  node02:
+    build: ./node01
+    hostname: node02
+    command: /usr/bin/supervisord
+    environment:
+      ZOOKEEPER_MYID: 2
+    #volumes:
+    #  - ./node01:/work
+  node03:
+    build: ./node01
+    hostname: node03
+    command: /usr/bin/supervisord
+    environment:
+      ZOOKEEPER_MYID: 3
+    #volumes:
+    #  - ./node01:/work

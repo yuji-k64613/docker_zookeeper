@@ -1,0 +1,3 @@
+server.1=node01:2888:3888
+server.2=node02:2888:3888
+server.3=node03:2888:3888
